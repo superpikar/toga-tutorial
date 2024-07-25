@@ -1,10 +1,15 @@
 import toga
 from toga.style.pack import COLUMN, LEFT, RIGHT, ROW, Pack
 
+def sayHello(fahrenheit, celcius):
+    print(fahrenheit, "°F is equivalent to", celcius, "°C")
+
 def build(app):
     def calculate(widget):
         try:
             celcius_input.value = (float(fahrenheit_input.value) - 32) * 5 / 9
+            # call function outside the scope
+            sayHello(fahrenheit_input.value, celcius_input.value)
         except ValueError:
             celcius_input.value = "???"
 

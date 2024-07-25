@@ -11,5 +11,9 @@ python -m pip install toga
 
 # running the app
 ```
+# run helloworld app
 python -m helloworld
+
+# run calculate app
+python -m calculate
 ```
